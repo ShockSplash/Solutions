@@ -1,0 +1,58 @@
+﻿@model PresentationLayer.Models.SolutionViewModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Solution</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.solution.Name)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.solution.Name)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.solution.StartDate)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.solution.StartDate)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.solution.CompletionDate)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.solution.CompletionDate)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.solution.Priority)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.solution.Priority)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.solution.solution_status)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.solution.solution_status)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Create" asp-controller="Tasks">Create New</a>
+    <p>All tasks:</p>
+    <ul>
+        @{ foreach (var item in Model.Tasks)
+            {
+                <li>
+                    <a asp-controller="Tasks" asp-action="Details" asp-route-id="@item.Id">@item.TaskName</a> ||
+                    <a asp-action="Delete" asp-controller="Tasks" asp-route-id="@item.Id">Delete</a>
+                </li>
+            }}
+    </ul>
+    <a asp-action="Index">Back to List</a>
+</div>
