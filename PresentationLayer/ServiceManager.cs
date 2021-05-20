@@ -7,6 +7,9 @@ using System.Text;
 
 namespace PresentationLayer.Services
 {
+    /// <summary>
+    /// This class is used as a layer for SolutionSerive and TaskService
+    /// </summary>
     public class ServicesManager
     {
         DataManager _dataManager;

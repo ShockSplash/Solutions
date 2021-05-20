@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace BussinesLayer.Interfaces
 {
+    /// <summary>
+    /// Interface for processing all solutions
+    /// </summary>
     public interface ITasksRepository
     {
         IEnumerable<ProjectStore.Task> GetAllTasks();

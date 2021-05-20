@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace PresentationLayer.Models
 {
+    /// <summary>
+    /// Service for filter Solution's
+    /// </summary>
     public interface ISortSolution
     {
         public IEnumerable<Solution> SortByStartDate(List<Solution> solutionList);

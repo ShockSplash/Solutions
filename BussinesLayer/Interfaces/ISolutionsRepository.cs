@@ -5,6 +5,9 @@ using System.Threading.Tasks;
 
 namespace BussinesLayer.Interfaces
 {
+    /// <summary>
+    /// Interface for processing all solutions
+    /// </summary>
     public interface ISolutionsRepository
     {
         Task<List<ProjectStore.Solution>> GetAllSolutionsAsync();

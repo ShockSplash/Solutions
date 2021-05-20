@@ -8,6 +8,9 @@ using System.Threading.Tasks;
 
 namespace PresentationLayer.Services
 {
+    /// <summary>
+    /// In this class we work with models "SolutionModel", since they are not used, these too.
+    /// </summary>
     public class SolutionService
     {
         private readonly DataManager _dataManager;
@@ -17,6 +20,11 @@ namespace PresentationLayer.Services
             _dataManager = dataManager;
         }
 
+        /// <summary>
+        /// Method for cast from DBModel to view model(SolutionViewModel).
+        /// </summary>
+        /// <param name="SolutionId">Current solution id</param>
+        /// <returns></returns>
         public SolutionViewModel SolutionDBModelToView(int SolutionId)
         {
             var res = _dataManager.Tasks.GetAllTasks();
@@ -29,6 +37,11 @@ namespace PresentationLayer.Services
             return model;
         }
 
+        /// <summary>
+        /// Method for get SolutionEditModel from DBModel.
+        /// </summary>
+        /// <param name="SolutionId">Current solution id</param>
+        /// <returns></returns>
         public SolutionEditModel GetSolutionEditModel(int SolutionId)
         {
             var model = _dataManager.Solutions.GetSolutionById(SolutionId);

@@ -6,11 +6,17 @@ using System.Text;
 
 namespace PresentationLayer
 {
+    /// <summary>
+    /// Various composite models can be stored here, they are not needed in this project, but they are there for example
+    /// </summary>
     public class TaskViewModel
     {
         public Task task;
     }
 
+    /// <summary>
+    /// Various composite models can be stored here, they are not needed in this project, but they are there for example
+    /// </summary>
     public class TaskEditModel
     {
         public int Id { get; set; }

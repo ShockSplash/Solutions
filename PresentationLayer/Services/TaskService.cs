@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace PresentationLayer.Services
 {
+    /// <summary>
+    /// In this class we work with models "TaskModels", since they are not used, these too.
+    /// </summary>
     public class TaskService
     {
         private readonly DataManager _dataManager;
@@ -16,6 +19,11 @@ namespace PresentationLayer.Services
             _dataManager = dataManager;
         }
 
+        /// <summary>
+        /// Method for cast from DBModel to view model(TaskViewModel).
+        /// </summary>
+        /// <param name="TaskId">Current task id</param>
+        /// <returns></returns>
         public TaskViewModel TaskDBModelToView(int TaskId)
         {
             var model = new TaskViewModel()
@@ -26,6 +34,11 @@ namespace PresentationLayer.Services
             return model;
         }
 
+        /// <summary>
+        /// Method for get TaskEditModel from DBModel.
+        /// </summary>
+        /// <param name="TaskId">Current task id</param>
+        /// <returns></returns>
         public TaskEditModel GetTaskEditModel(int TaskId)
         {
             var model = _dataManager.Tasks.GetTaskById(TaskId);

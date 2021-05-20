@@ -62,8 +62,6 @@ namespace ProjectStore.Views
         }
 
         // POST: Solutions/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult Create([Bind("Id,Name,StartDate,CompletionDate,Priority,solution_status")] Solution solution)
@@ -93,7 +91,6 @@ namespace ProjectStore.Views
         }
 
         // POST: Solutions/Edit/5
-        // To protect from overposting attacks, enable the specific proper}ties you want to bind to.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult Edit(int id, [Bind("Id,Name,StartDate,CompletionDate,Priority,solution_status")] Solution solution)

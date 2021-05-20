@@ -30,7 +30,7 @@ namespace ProjectStore
 
             services.AddDbContext<project_storageContext>(options =>
             options.UseNpgsql(Configuration.GetConnectionString("DefaultConnection"))
-            ).AddScoped<project_storageContext>();
+            );
 
             services.AddTransient<ISortSolution, SortSolution>();
 
@@ -49,7 +49,6 @@ namespace ProjectStore
             else
             {
                 app.UseExceptionHandler("/Home/Error");
-                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
             app.UseHttpsRedirection();

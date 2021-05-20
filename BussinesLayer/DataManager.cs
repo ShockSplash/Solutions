@@ -7,6 +7,10 @@ using System.Threading.Tasks;
 
 namespace BussinesLayer
 {
+
+    /// <summary>
+    /// This class is used as a layer for ISolutionsRepository and ITasksRepository
+    /// </summary>
     public class DataManager
     {
         private readonly ISolutionsRepository _solutionsRepository;
